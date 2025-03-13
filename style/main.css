@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --yellow-color: hsl(47, 88%, 63%);
+    --gray-950: hsl(0, 0%, 7%);
+    --gray-500: hsl(0, 0%, 42%);
+
+    --font-family: "Figtree", sans-serif;
+    --font-size-title: 1.5rem;
+    --font-size-text: 1rem;
+    --font-size-tiny: 0.875rem;
+
+    --line-height: 150%;
+    --letter-spacing: 0;
+
+
+
+    --spacing-50: 0.25rem;
+    --spacing-100: 0.5rem;
+    --spacing-150: 0.75rem;
+    --spacing-300: 1.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3, p , span {
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+}
+
+body {
+    background-color: var(--yellow-color);
+    font-family: var(--font-family);
+    color: var(--gray-950);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+.card-container {
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+
+    max-width: 384px;
+
+    margin: 0 var(--spacing-300);
+    border: 1px solid var(--gray-950);
+    box-shadow: 8px 8px #000;
+    padding: var(--spacing-300);
+    border-radius: 20px;
+
+    background-color: var(--white-color);
+    & .image {
+        border-radius: 10px;
+    }
+
+    & .content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-150);
+    }
+
+    & .tag {
+        padding: var(--spacing-100) var(--spacing-150);
+        border-radius: 4px;
+        font-size: var(--font-size-tiny);
+        font-weight: 800;
+
+        width: fit-content;
+        background-color: var(--yellow-color);
+    }
+
+    & .publish-date {
+        font-size: var(--font-size-tiny);
+        font-weight: 500;
+    }
+
+    & .title {
+        font-size: var(--font-size-title);
+        font-weight: 800;
+    }
+    & .description {
+        font-size: var(--font-size-text);
+        font-weight: 500;
+        color: var(--gray-500);
+    }
+
+    & .author-profile {
+        display: flex;
+        gap: var(--spacing-150);
+        align-items: center;
+    }
+
+    & .author-image {
+        width: 32px;
+    }
+}
