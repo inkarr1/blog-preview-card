@@ -109,3 +109,10 @@ main {
         width: 32px;
     }
 }
+
+.card:hover {
+    cursor: pointer;
+    .title {
+        color: var(--yellow-color);
+    }
+}
